@@ -13,6 +13,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 - React
 - CSS
 - HTML
+### Libraries Used:
+1. styled-components
+2. react-router-dom
+3. framer-motion
+4. react-paginate
+5. @splidejs/react-splide
+
+npm install <all the libraries> to run the code without any errors
+npm install react-paginate framer-motion react-router-dom styled-components splidejs/react-splide
+
 
 <h1 align="center"> Screenshots </h1>
 <p>
