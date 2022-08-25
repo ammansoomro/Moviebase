@@ -20,7 +20,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 4. react-paginate
 5. @splidejs/react-splide
 
-npm install <all the libraries> to run the code without any errors
+npm install all the libraries to run the code without any errors
+
 npm install react-paginate framer-motion react-router-dom styled-components splidejs/react-splide
 
 
