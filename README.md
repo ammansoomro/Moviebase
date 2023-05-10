@@ -1,27 +1,32 @@
+# Moviebase - YTS
+This project is a YTS clone built using React and its libraries, and it's populated using YTS official API. It provides users with an interface that allows them to browse, search and download movies torrents from YTS website.
+
+
 Demo: https://moviebase-yts.netlify.app/
+
 
 ## To run the Project
 
-In the project directory, you can run:
+1. To run the project, you need to follow these steps:
+2. Clone this repository on your local machine.
+3. Navigate to the project directory and open your terminal.
+4. Run the command npm install to install all the necessary dependencies.
+5. Once the dependencies are installed, run the command npm start to start the development server.
+6. Open your web browser and go to http://localhost:3000 to view the app.
 
-### `npm start`
+## Frameworks, Languages and Libraries Used
+The project is built using the following frameworks, languages and libraries:
+- React: A popular JavaScript library for building user interfaces.
+- HTML: A markup language used for creating web pages.
+- CSS: A stylesheet language used for describing the presentation of a document written in HTML.
+- styled-components: A library that allows you to write CSS code within your JavaScript code.
+- react-router-dom: A library used for routing in React applications.
+- framer-motion: A library used for creating animations in React applications.
+- react-paginate: A library used for implementing pagination in React applications.
+- @splidejs/react-splide: A library used for creating carousels in React applications.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### Framework and Languages:
-- React
-- CSS
-- HTML
-### Libraries Used:
-1. styled-components
-2. react-router-dom
-3. framer-motion
-4. react-paginate
-5. @splidejs/react-splide
-
-npm install all the libraries to run the code without any errors
-
+## Installation
+To install the necessary libraries for the project, run the following command:
 npm install react-paginate framer-motion react-router-dom styled-components splidejs/react-splide
 
 
