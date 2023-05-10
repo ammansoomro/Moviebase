@@ -27,7 +27,8 @@ The project is built using the following frameworks, languages and libraries:
 
 ## Installation
 To install the necessary libraries for the project, run the following command:
-npm install react-paginate framer-motion react-router-dom styled-components splidejs/react-splide
+
+``` npm install react-paginate framer-motion react-router-dom styled-components splidejs/react-splide ```
 
 
 <h1 align="center"> Screenshots </h1>
