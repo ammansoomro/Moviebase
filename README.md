@@ -1,4 +1,4 @@
-# Moviebase - YTS
+# Moviebase
 This project is a YTS clone built using React and its libraries, and it's populated using YTS official API. It provides users with an interface that allows them to browse, search and download movies torrents from YTS website.
 
 
