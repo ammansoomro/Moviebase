@@ -1,6 +1,5 @@
-import FeaturedMovies from "../components/FeaturedMovies";
-import LatestMovies from "../components/LatestMovies";
 import Heading from "../components/Heading";
+import MovieCarousel from "../components/MovieCarousel";
 import { motion } from "framer-motion";
 
 function Home() {
@@ -12,8 +11,8 @@ function Home() {
       transition={{ duration: 0.5 }}
     >
       <Heading />
-      <FeaturedMovies />
-      <LatestMovies />
+      <MovieCarousel title="Top Animated Movies" />
+      <MovieCarousel title="Recently Added" />
     </motion.div>
   );
 }
