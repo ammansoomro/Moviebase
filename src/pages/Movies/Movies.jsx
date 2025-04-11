@@ -1,9 +1,11 @@
+// src/pages/Movies/Movies.jsx
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import ReactPaginate from "react-paginate";
-import SearchBar from "../../components/Search/Search";
+import Pagination from "../../components/Pagination/Pagination";
 import MovieCard from "../../components/MovieCard/MovieCard";
+import SearchBar from "../../components/Search/Search";
+import { fetchMoviesFromAPI } from "../../services/movieService";
 import "./Movies.scss";
 
 function Movies() {
@@ -11,26 +13,18 @@ function Movies() {
   const [movieCount, setMovieCount] = useState(0);
   const param = useParams();
 
-  const isSearchMode = !!param.search;
   const itemsPerPage = 20;
 
-  const fetchMovies = async (page = 1) => {
+  const loadMovies = async (page = 1) => {
     try {
-      const baseUrl = "https://yts.mx/api/v2/list_movies.json";
-      const params = new URLSearchParams({
-        limit: itemsPerPage,
+      const { movies, movieCount } = await fetchMoviesFromAPI({
         page,
-        ...(isSearchMode ? { query_term: param.search } : { sort_by: "year" }),
+        search: param.search || "",
+        itemsPerPage,
       });
 
-      const fullUrl = `${baseUrl}?${params.toString()}`;
-      const wrappedUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(fullUrl)}`;
-      const response = await fetch(wrappedUrl);
-      const result = await response.json();
-      const data = JSON.parse(result.contents);
-
-      setMovies(data.data.movies || []);
-      setMovieCount(data.data.movie_count || 0);
+      setMovies(movies);
+      setMovieCount(movieCount);
     } catch (error) {
       console.error("Failed to fetch movies:", error);
       setMovies([]);
@@ -39,38 +33,23 @@ function Movies() {
   };
 
   useEffect(() => {
-    fetchMovies(1);
+    loadMovies(1);
   }, [param.search]);
 
-  const handlePageClick = async (data) => {
+  const handlePageClick = (data) => {
     const currentPage = data.selected + 1;
-    await fetchMovies(currentPage);
+    loadMovies(currentPage);
   };
 
   return (
     <div className="all-movies-wrapper">
       <SearchBar />
-      <div className="paginate-container">
-        <ReactPaginate
-          previousLabel={"Prev"}
-          nextLabel={"Next"}
-          onPageChange={handlePageClick}
-          pageCount={(movieCount || 43430) / itemsPerPage}
-          containerClassName={"pagination"}
-          pageClassName={"pagination"}
-          previousClassName={"pagination"}
-          previousLinkClassName={"pagination__link"}
-          nextLinkClassName={"pagination__link"}
-          nextClassName={"pagination"}
-          breakClassName={"pagination"}
-          breakLinkClassName={"pagination"}
-          disabledClassName={"pagination__link--disabled"}
-          activeClassName={"pagination__link--active"}
-          pageRangeDisplayed={1}
-          marginPagesDisplayed={1}
-        />
-      </div>
-
+  
+      <Pagination
+        pageCount={(movieCount || 43430) / itemsPerPage}
+        onPageChange={handlePageClick}
+      />
+  
       <motion.div
         className="movie-grid"
         animate={{ opacity: 1 }}
