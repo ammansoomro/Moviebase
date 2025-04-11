@@ -1,8 +1,8 @@
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Page from './pages/Pages'
-import './index.css';
-import { BrowserRouter } from 'react-router-dom';
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Page from "./pages/Pages";
+import "./index.css";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
