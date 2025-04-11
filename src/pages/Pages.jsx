@@ -1,6 +1,6 @@
-import Home from "./Home";
-import Movie from "./Movie";
-import AllMovies from "./Movies";
+import Home from "./Home/Home";
+import Movie from "./Movie/Movie";
+import AllMovies from "./Movies/Movies";
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';

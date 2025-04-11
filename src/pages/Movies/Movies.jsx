@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import ReactPaginate from "react-paginate";
-import SearchBar from "../components/Search/Search";
-import MovieCard from "../components/MovieCard/MovieCard";
+import SearchBar from "../../components/Search/Search";
+import MovieCard from "../../components/MovieCard/MovieCard";
 import "./Movies.scss";
 
 function Movies() {

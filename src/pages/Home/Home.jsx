@@ -1,5 +1,5 @@
-import Heading from "../components/Heading/Heading";
-import MovieCarousel from "../components/MovieCarousel/MovieCarousel";
+import Heading from "../../components/Heading/Heading";
+import MovieCarousel from "../../components/MovieCarousel/MovieCarousel";
 import { motion } from "framer-motion";
 
 function Home() {
