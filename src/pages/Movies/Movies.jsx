@@ -1,5 +1,5 @@
 // src/pages/Movies/Movies.jsx
-import { useState, useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import Pagination from "../../components/Pagination/Pagination";
@@ -15,26 +15,29 @@ function Movies() {
 
   const itemsPerPage = 20;
 
-  const loadMovies = async (page = 1) => {
-    try {
-      const { movies, movieCount } = await fetchMoviesFromAPI({
-        page,
-        search: param.search || "",
-        itemsPerPage,
-      });
+  const loadMovies = useCallback(
+    async (page = 1) => {
+      try {
+        const { movies, movieCount } = await fetchMoviesFromAPI({
+          page,
+          search: param.get("search") || "",
+          itemsPerPage,
+        });
 
-      setMovies(movies);
-      setMovieCount(movieCount);
-    } catch (error) {
-      console.error("Failed to fetch movies:", error);
-      setMovies([]);
-      setMovieCount(0);
-    }
-  };
+        setMovies(movies);
+        setMovieCount(movieCount);
+      } catch (error) {
+        console.error("Failed to fetch movies:", error);
+        setMovies([]);
+        setMovieCount(0);
+      }
+    },
+    [param, itemsPerPage] // dependencies
+  );
 
   useEffect(() => {
     loadMovies(1);
-  }, [param.search]);
+  }, [loadMovies]);
 
   const handlePageClick = (data) => {
     const currentPage = data.selected + 1;
