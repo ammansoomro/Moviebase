@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import MovieCard from "../MovieCard/MovieCard";
-import Loader from "../Loader/Loader";
+import Loader from "../Loader/Loader"
 import { fetchMovies } from "../../services/movieService";
 
 const MovieCarousel = ({ title }) => {

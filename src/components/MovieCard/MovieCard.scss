@@ -7,7 +7,7 @@
   transition: all ease 0.3s;
 
   &:hover {
-    border: 0.3rem solid #c5070a;
+    border: 0.3rem solid #9a2e2e;
   }
 
   &:hover .card-hover {
@@ -115,17 +115,17 @@
 
   .btn {
     border: none;
-    outline: 2px solid #d3060a;
+    outline: 2px solid #9a2e2e;
     background: transparent;
-    color: #d3060a;
+    color: #9a2e2e;
     cursor: pointer;
     font-weight: bold;
     padding: 5px 10px;
     transition: 0.4s;
 
     &:hover {
-      color: #a30507;
-      outline: 2px solid #a30507;
+      color: #9a2e2e;
+      outline: 2px solid #9a2e2e;
     }
   }
 }
