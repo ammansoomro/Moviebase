@@ -24,3 +24,31 @@ export const fetchMoviesFromAPI = async ({
     movieCount: data.data.movie_count || 0,
   };
 };
+
+export const fetchMovies = async (title) => {
+  try {
+    let apiUrl = "";
+
+    if (title === "Recently Added") {
+      apiUrl =
+        "https://yts.mx/api/v2/list_movies.json?sort_by=date_added&order_by=DESC";
+    } else if (title === "Top Animated Movies") {
+      apiUrl =
+        "https://yts.mx/api/v2/list_movies.json?sort_by=rating&order_by=DESC&genre=animation";
+    } else {
+      throw new Error("No API configured for this title");
+    }
+
+    const wrappedUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(
+      apiUrl
+    )}`;
+    const response = await fetch(wrappedUrl);
+    const result = await response.json();
+    const data = JSON.parse(result.contents);
+
+    return data.data.movies;
+  } catch (error) {
+    console.error("Error fetching movies:", error);
+    return [];
+  }
+};
