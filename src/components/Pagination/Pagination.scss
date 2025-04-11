@@ -1,0 +1,45 @@
+.paginate-container {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem 0.2rem;
+
+    li {
+      display: none; // Hide all items by default
+    }
+
+    // Show only the Prev and Next buttons
+    li:first-child,
+    li:last-child {
+      display: inline-block;
+      margin: 0 0.5rem; // Add gap between Prev and Next
+    }
+
+    a {
+      padding: 10px 16px;
+      border-radius: 0.3rem;
+      border: 1px solid #c5070a;
+      color: #c5070a;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    &__link--active a {
+      color: #fff;
+      background: #c5070a;
+    }
+
+    &__link--disabled a {
+      color: rgb(198, 197, 202);
+      border: 1px solid rgb(198, 197, 202);
+      cursor: not-allowed;
+    }
+
+    a:hover:not(.pagination__link--disabled a) {
+      background: rgba(197, 7, 10, 0.1);
+    }
+  }
+}
