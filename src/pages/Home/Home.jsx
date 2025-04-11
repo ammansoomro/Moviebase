@@ -9,6 +9,7 @@ function Home() {
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
+      className="flex flex-col gap-l"
     >
       <Heading />
       <MovieCarousel title="Top Animated Movies" />

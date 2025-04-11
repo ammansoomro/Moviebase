@@ -28,12 +28,12 @@ ul{
   --base-white-light: #fafafa;
   --base-black: #000000;
   --base-black-light: #121212;
-  --color-primary: #edb10b;
+  --color-primary: #b40101;
   --light-color-primary-bg: #ffffff;
   --light-color-base-bg: #edf2f8;
   --light-color-primary-text: #000000;
   --light-color-primary-text-light: #262626;
-  --light-color-primary: #edb10b;
+  --light-color-primary: #b40101;
   --light-color-secondary: #ffda00;
   --light-color-success: #27ae60;
   --light-color-warning: #eb5757;
@@ -95,7 +95,7 @@ ul{
   --dark-color-base-bg: #000000;
   --dark-color-primary-text: #ffffff;
   --dark-color-primary-text-light: #b3b3b3;
-  --dark-color-primary: #edb10b;
+  --dark-color-primary: #b40101;
   --dark-color-secondary: #ffda00;
   --dark-color-success: #27ae60;
   --dark-color-warning: #eb5757;
@@ -315,19 +315,19 @@ ul{
 }
 
 .light-theme .color-primary {
-  color: #edb10b;
+  color: #b40101;
 }
 
 .light-theme .bg-color-primary {
-  background-color: #edb10b;
+  background-color: #b40101;
 }
 
 .light-theme .br-color-primary {
-  border-color: #edb10b;
+  border-color: #b40101;
 }
 
 .light-theme .ot-color-primary {
-  outline-color: #edb10b;
+  outline-color: #b40101;
 }
 
 .light-theme .color-secondary {
@@ -1177,19 +1177,19 @@ ul{
 }
 
 .dark-theme .color-primary {
-  color: #edb10b;
+  color: #b40101;
 }
 
 .dark-theme .bg-color-primary {
-  background-color: #edb10b;
+  background-color: #b40101;
 }
 
 .dark-theme .br-color-primary {
-  border-color: #edb10b;
+  border-color: #b40101;
 }
 
 .dark-theme .ot-color-primary {
-  outline-color: #edb10b;
+  outline-color: #b40101;
 }
 
 .dark-theme .color-secondary {
@@ -2767,33 +2767,33 @@ ul{
 }
 
 .p-xxl {
-  padding: 3rem;
+  padding: 6rem;
 }
 
 .px-xxl {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .py-xxl {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .pl-xxl {
-  padding-left: 3rem;
+  padding-left: 6rem;
 }
 
 .pr-xxl {
-  padding-right: 3rem;
+  padding-right: 6rem;
 }
 
 .pt-xxl {
-  padding-top: 3rem;
+  padding-top: 6rem;
 }
 
 .pb-xxl {
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
 }
 
 .gap-xxs {
@@ -3210,4 +3210,9 @@ ul{
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #7c0202   
+}
+
+.section-heading {
+  font-family: "Blanka", sans-serif;
+  background: #610e0ec2;
 }

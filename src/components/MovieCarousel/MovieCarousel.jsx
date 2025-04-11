@@ -2,30 +2,27 @@ import { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import MovieCard from "../MovieCard/MovieCard";
-import Loader from "../Loader/Loader"; 
-import { fetchMovies } from "../../services/movieService"; 
-import "./MovieCarousel.scss";
+import Loader from "../Loader/Loader";
+import { fetchMovies } from "../../services/movieService";
 
 const MovieCarousel = ({ title }) => {
   const [movies, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadMovies = async () => {
-      setIsLoading(true); 
+      setIsLoading(true);
       const fetchedMovies = await fetchMovies(title);
       setMovies(fetchedMovies);
-      setIsLoading(false); 
+      setIsLoading(false);
     };
 
     loadMovies();
   }, [title]);
 
   return (
-    <div className="wrapper">
-      <div className="section-heading">
-        <h1>{title}</h1>
-      </div>
+    <div className="flex flex-col gap-base">
+      <div className="section-heading w-full py-sm flex-center heading-3 section-heading">{title}</div>
 
       {isLoading ? (
         <Loader />
