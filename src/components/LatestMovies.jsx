@@ -8,7 +8,7 @@ function LatestMovies() {
   useEffect(() => {
     const getLatestMovies = async () => {
       const response = await fetch(
-        "https://api.allorigins.win/raw?url=https://yts.torrentbay.to/api/v2/list_movies.json?sort_by=date_added&order_by=DESC"
+        "https://api.allorigins.win/raw?url=https://yts.mx/api/v2/list_movies.json?sort_by=date_added&order_by=DESC"
       ).then((response) => response.json());
       console.log(response.data);
       setFeatured(response.data.movies);

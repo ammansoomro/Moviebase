@@ -18,7 +18,7 @@ function AllMovies() {
 
     useEffect(() => {
         const getFeaturedMovies = async (search) => {
-            const url = `https://yts.torrentbay.to/api/v2/list_movies.json?query_term=${search}`;
+            const url = `https://yts.mx/api/v2/list_movies.json?query_term=${search}`;
             const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`).then((response) => response.json());
             let data = JSON.parse(response.contents);
             console.log(data);
@@ -31,7 +31,7 @@ function AllMovies() {
 
 
     const fetchMovies = async (Search, CurrentPage) => {
-        const url = "https://yts.torrentbay.to/api/v2/list_movies.json?query_term=" + Search + "&limit=20&page=" + CurrentPage
+        const url = "https://yts.mx/api/v2/list_movies.json?query_term=" + Search + "&limit=20&page=" + CurrentPage
         console.log(url);
         const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`).then((response) => response.json());
         let data = JSON.parse(response.contents);

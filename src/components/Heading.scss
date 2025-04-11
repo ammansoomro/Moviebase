@@ -1,0 +1,28 @@
+.heading-wrapper {
+  margin: 0.5rem 5rem;
+}
+
+.heading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 3.1rem;
+    padding: 0.5rem 0;
+  }
+
+  p {
+    text-align: center;
+    width: 60%;
+    padding: 0.5rem 0;
+    color: #70797d;
+    font-weight: 400;
+  }
+
+  h4 {
+    padding: 0.5rem 0;
+    color: #a20909;
+  }
+}

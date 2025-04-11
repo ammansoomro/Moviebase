@@ -10,7 +10,7 @@ function Movie() {
   useEffect(() => {
     const getItem = async (id) => {
       const response = await fetch(
-        `https://api.allorigins.win/raw?url=https://yts.torrentbay.to/api/v2/movie_details.json?movie_id=${id}`
+        `https://api.allorigins.win/raw?url=https://yts.mx/api/v2/movie_details.json?movie_id=${id}`
       ).then((response) => response.json());
       setItem(response.data.movie);
       setgenre(response.data.movie.genres)
