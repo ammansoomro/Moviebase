@@ -1,6 +1,6 @@
 // src/pages/Movies/Movies.jsx
 import React, { useEffect, useState, useCallback } from "react";
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom"; // ✅ this is what you need
 import { motion } from "framer-motion";
 import Pagination from "../../components/Pagination/Pagination";
 import MovieCard from "../../components/MovieCard/MovieCard";
@@ -11,7 +11,7 @@ import "./Movies.scss";
 function Movies() {
   const [movies, setMovies] = useState([]);
   const [movieCount, setMovieCount] = useState(0);
-  const param = useParams();
+  const [searchParams] = useSearchParams(); // ✅ correct usage
 
   const itemsPerPage = 20;
 
@@ -20,7 +20,7 @@ function Movies() {
       try {
         const { movies, movieCount } = await fetchMoviesFromAPI({
           page,
-          search: param.get("search") || "",
+          search: searchParams.get("search") || "",
           itemsPerPage,
         });
 
@@ -32,7 +32,7 @@ function Movies() {
         setMovieCount(0);
       }
     },
-    [param, itemsPerPage] // dependencies
+    [searchParams, itemsPerPage]
   );
 
   useEffect(() => {
@@ -47,12 +47,12 @@ function Movies() {
   return (
     <div className="all-movies-wrapper">
       <SearchBar />
-  
+
       <Pagination
-        pageCount={(movieCount || 43430) / itemsPerPage}
+        pageCount={Math.ceil(movieCount / itemsPerPage)}
         onPageChange={handlePageClick}
       />
-  
+
       <motion.div
         className="movie-grid"
         animate={{ opacity: 1 }}
