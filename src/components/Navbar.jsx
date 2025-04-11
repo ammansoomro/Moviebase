@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import SearchBar from "./Search";
-import { BiSearchAlt } from "react-icons/bi";
 import './Navbar.scss';
 
 function Navbar() {
