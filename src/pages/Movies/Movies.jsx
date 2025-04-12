@@ -45,7 +45,7 @@ function Movies() {
   };
 
   return (
-    <div className="all-movies-wrapper">
+    <div className="flex flex-col gap-l px-xxl py-l">
       <SearchBar />
 
       <Pagination
