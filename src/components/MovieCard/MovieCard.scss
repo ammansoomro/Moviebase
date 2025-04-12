@@ -1,4 +1,4 @@
-.featured-card {
+.movie-card {
   width: 207px;
   height: 320px;
   position: relative;
@@ -15,19 +15,7 @@
   }
 }
 
-.card-image {
-  width: 100%;
-  height: 100%;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    object-position: center;
-  }
-}
-
-.card-text {
+.card-content {
   position: absolute;
   left: 0;
   top: 0;
@@ -38,54 +26,10 @@
     #161616b9 35%,
     rgba(73, 73, 73, 0.23) 64%
   );
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 25px;
-  justify-content: space-between;
-
-  .quality {
-    background-color: #e70634;
-    color: #080808;
-    font-weight: 600;
-    padding: 0px 0.5rem;
-    height: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    border-radius: 4px;
-    opacity: 0;
-  }
-
-  .moviename {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    strong {
-      font-size: 1rem;
-      line-height: 20px;
-      margin-top: 10px;
-      color: #dfdfdf;
-      letter-spacing: 0.5px;
-    }
-  }
-
-  .rating {
-    display: flex;
-    align-items: center;
-    justify-content: flex;
-    letter-spacing: 0.1rem;
-
-    img {
-      height: 2rem;
-      width: 2.4rem;
-      object-fit: contain;
-      object-position: center;
-      margin: 0px 10px;
-    }
+  .imdb-logo {
+    height: 2rem;
+    width: 2.4rem;
+    margin: 0px 10px;
   }
 }
 
@@ -100,19 +44,6 @@
   transition: 0.5s;
   padding: 10px;
   background: linear-gradient(90deg, #000000b5 100%, #fafafa 0%);
-  display: flex;
-  justify-content: space-between;
-  place-items: center;
-  flex-direction: column;
-
-  h1 {
-    margin-top: 30%;
-  }
-
-  h3 {
-    margin-bottom: 40%;
-  }
-
   .btn {
     border: none;
     outline: 2px solid #9a2e2e;

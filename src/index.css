@@ -158,7 +158,11 @@ ul{
 
 .blanka{
   font-family: "Blanka", sans-serif;
+}
 
+.image-center{
+  object-fit: fill;
+  object-position: center;
 }
 
 .base-white {
@@ -2091,6 +2095,10 @@ ul{
 
 .w-full {
   width: 100%;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .w-half {

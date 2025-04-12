@@ -21,7 +21,7 @@ const MovieCarousel = ({ title }) => {
   }, [title]);
 
   return (
-    <div className="flex flex-col gap-base">
+    <div className="flex flex-col gap-base px-xxl">
       <div className="section-heading w-full py-sm flex-center heading-3 text-center">{title}</div>
 
       {isLoading ? (

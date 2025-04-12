@@ -132,8 +132,6 @@
   font-weight: bold;
   padding: 5px 4px;
   transition: 0.4s;
-  margin-top: 1rem;
-  margin-right: 0.9rem;
 }
 
 .btn:hover {
@@ -199,7 +197,7 @@ li:not(:first-child) {
   padding: 1.2rem;
 }
 
-.movie-card {
+.movie-main-card {
   z-index: 2;
   width: 300px;
   height: 350px;

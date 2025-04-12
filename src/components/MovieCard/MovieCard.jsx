@@ -4,28 +4,33 @@ import "./MovieCard.scss";
 
 const MovieCard = ({ movie }) => {
   return (
-    <div className="featured-card">
+    <div className="movie-card">
       <Link to={`/Movie/${movie.id}/${movie.slug}`}>
-        <div className="card-image">
-          <img src={movie.large_cover_image} alt={movie.title} />
+        <div className="w-full h-full">
+          <img
+            className="w-full h-full "
+            src={movie.large_cover_image}
+            alt={movie.title}
+          />
         </div>
 
-        <div className="card-hover body">
-          <h1>{movie.genres[1]}</h1>
+        <div className="card-hover flex-center gap-xl flex-col">
+          <div className="feature-bold">{movie.genres[1]}</div>
           <button className="btn">View Movie</button>
-          <h3>{movie.runtime}mins</h3>
+          <div className="highlight-accent">{movie.runtime}mins</div>
         </div>
 
-        <div className="card-text">
-          <span className="quality">Full HD</span>
+        <div className="card-content flex flex-col flex-align-start flex-justify-between p-base">
+          <div></div>
           <div className="bottom">
-            <div className="moviename">
+            <div className="text-left flex flex-col gap-sm flex-align-start">
               <span>{movie.year}</span>
-              <strong>{movie.title}</strong>
+              <strong className="highlight-bold">{movie.title}</strong>
             </div>
-            <div className="rating">
+            <div className="rating flex flex-align-center">
               {movie.rating}/10
               <img
+                className="imdb-logo"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/575px-IMDB_Logo_2016.svg.png"
                 alt="IMDB Logo"
               />

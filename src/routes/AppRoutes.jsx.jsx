@@ -9,14 +9,12 @@ function Pages() {
   const location = useLocation();
   return (
     <AnimatePresence exitBeforeEnter>
-      <div className="px-xxl">
         <Routes location={location} key={location.path}>
           <Route path="/" element={<Home />} />
           <Route path="/Movie/:id/:slug" element={<Movie />} />
           <Route path="/movies" element={<AllMovies />} />
           <Route path="/movies/search/:search" element={<AllMovies />} />
         </Routes>
-      </div>
     </AnimatePresence>
   );
 }

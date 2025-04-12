@@ -72,7 +72,7 @@ function Movie() {
             </div>
           </div>
         </div>
-        <div className="movie-card">
+        <div className="movie-main-card">
           <div className="card-image">
             <img src={item.medium_cover_image} alt="Please Wait, Fetching Data..." />
           </div>
