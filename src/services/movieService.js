@@ -1,3 +1,5 @@
+const movieCache = {};
+
 export const fetchMoviesFromAPI = async ({
   page = 1,
   search = "",
@@ -27,6 +29,10 @@ export const fetchMoviesFromAPI = async ({
 
 export const fetchMovies = async (title) => {
   try {
+    if (movieCache[title]) {
+      return movieCache[title];
+    }
+
     let apiUrl = "";
 
     if (title === "Recently Added") {
@@ -46,7 +52,9 @@ export const fetchMovies = async (title) => {
     const result = await response.json();
     const data = JSON.parse(result.contents);
 
-    return data.data.movies;
+    // Save to cache before returning
+    movieCache[title] = data.data.movies;
+    return movieCache[title];
   } catch (error) {
     console.error("Error fetching movies:", error);
     return [];
