@@ -1,37 +1,16 @@
-.nav {
-  background: #050508;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1rem 5rem;
-
-  h1 {
-    font-family: "Blanka", sans-serif;
-    font-size: 2.3rem;
-    letter-spacing: 0.2rem;
-    color: #b40101;
-    font-weight: 500;
-  }
+.list-item {
+  cursor: pointer;
+  transition: all ease 0.8s;
 }
 
-.search {
-  display: flex;
+.list-item:hover {
+  color: var(--color-primary);
 }
 
-.navlist {
-  display: flex;
+.search-wrapper {
+  display: block;
 
-  li {
-    font-family: "Blanka", sans-serif;
-    padding: 0.5rem 2rem;
-    color: white;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all ease 0.8s;
-  }
-
-  li:hover {
-    color: #b40101;
+  @media (max-width: 768px) {
+    display: none;
   }
 }

@@ -28,12 +28,12 @@ ul{
   --base-white-light: #fafafa;
   --base-black: #000000;
   --base-black-light: #121212;
-  --color-primary: #b40101;
+  --color-primary: #9a2e2e;
   --dark-color-primary-bg: #272727;
   --dark-color-base-bg: #000000;
   --dark-color-primary-text: #ffffff;
   --dark-color-primary-text-light: #b3b3b3;
-  --dark-color-primary: #b40101;
+  --dark-color-primary: #9a2e2e;
   --dark-color-secondary: #ffda00;
   --dark-color-success: #27ae60;
   --dark-color-warning: #eb5757;
@@ -156,6 +156,11 @@ ul{
   --shadow-xl: 0px 4px 12px 0px #0000001f;
 }
 
+.blanka{
+  font-family: "Blanka", sans-serif;
+
+}
+
 .base-white {
   color: #ffffff;
 }
@@ -253,19 +258,19 @@ ul{
 }
 
  .color-primary {
-  color: #b40101;
+  color: #9a2e2e;
 }
 
  .bg-color-primary {
-  background-color: #b40101;
+  background-color: #9a2e2e;
 }
 
  .br-color-primary {
-  border-color: #b40101;
+  border-color: #9a2e2e;
 }
 
  .ot-color-primary {
-  outline-color: #b40101;
+  outline-color: #9a2e2e;
 }
 
  .color-secondary {
@@ -577,7 +582,7 @@ ul{
 }
 
  .bg-neutral-100 {
-  background-color: #1a1919;
+  background-color: #000000;
 }
 
  .br-neutral-100 {
@@ -2279,12 +2284,12 @@ ul{
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #d00202;
+    background-color: var(--color-primary);
     border-radius: 5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #7c0202   
+    background-color: #892929   
 }
 
 .section-heading {
