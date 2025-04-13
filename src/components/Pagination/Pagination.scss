@@ -20,8 +20,8 @@
     a {
       padding: 10px 16px;
       border-radius: 0.3rem;
-      border: 1px solid #c5070a;
-      color: #c5070a;
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s ease;
@@ -29,7 +29,7 @@
 
     &__link--active a {
       color: #fff;
-      background: #c5070a;
+      background: var(--color-primary);
     }
 
     &__link--disabled a {

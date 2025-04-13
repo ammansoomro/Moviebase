@@ -9,24 +9,24 @@
     background-color: #83828233;
     background-repeat: no-repeat;
     background-size: 18px 18px;
+    border: 2px solid transparent;
     background-position: 95% center;
-    border-radius: 1rem;
-    border: 2px solid #b40101;
-    transition: all 250ms ease-in-out;
+    border-bottom: 2px solid var(--color-primary);
 
+    transition: all 250ms ease-in-out;
     &::placeholder {
-      color: rgba(250, 250, 250, 0.5);
+      color: rgba(250, 250, 250, 0.228);
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-size: 0.75rem;
     }
-
+    &:focus::placeholder {
+      color: transparent;
+    }
     &:hover,
     &:focus {
       padding: 0.5rem 0.5rem;
       outline: 0;
-      border: 2px solid transparent;
-      border-bottom: 2px solid #b40101;
       border-radius: 0;
       background-position: 100% center;
     }

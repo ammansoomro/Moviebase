@@ -5,7 +5,7 @@
   transition: all ease 0.3s;
 
   &:hover {
-    border: 0.3rem solid #9a2e2e;
+    border: 0.3rem solid var(--color-primary);
   }
 
   &:hover .card-hover {
@@ -44,17 +44,17 @@
   background: linear-gradient(90deg, #000000b5 100%, #fafafa 0%);
   .btn {
     border: none;
-    outline: 2px solid #9a2e2e;
+    outline: 2px solid var(--color-primary);
     background: transparent;
-    color: #9a2e2e;
+    color: var(--color-primary);
     cursor: pointer;
     font-weight: bold;
     padding: 5px 10px;
     transition: 0.4s;
 
     &:hover {
-      color: #9a2e2e;
-      outline: 2px solid #9a2e2e;
+      color: var(--color-primary);
+      outline: 2px solid var(--color-primary);
     }
   }
 }

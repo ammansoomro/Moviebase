@@ -28,7 +28,7 @@ ul{
   --base-white-light: #fafafa;
   --base-black: #000000;
   --base-black-light: #121212;
-  --color-primary: #9a2e2e;
+  --color-primary: #27ae60;
   --dark-color-primary-bg: #272727;
   --dark-color-base-bg: #000000;
   --dark-color-primary-text: #ffffff;
@@ -262,19 +262,19 @@ ul{
 }
 
  .color-primary {
-  color: #9a2e2e;
+  color: var(--color-primary);
 }
 
  .bg-color-primary {
-  background-color: #9a2e2e;
+  background-color: var(--color-primary);
 }
 
  .br-color-primary {
-  border-color: #9a2e2e;
+  border-color: var(--color-primary);
 }
 
  .ot-color-primary {
-  outline-color: #9a2e2e;
+  outline-color: var(--color-primary);
 }
 
  .color-secondary {
