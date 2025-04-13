@@ -24,15 +24,15 @@ function Movie() {
   }, [param.id]);
 
   return (
-    <div className="wrapper">
-      <div className="movie-banner">
+    <div className="p-xl">
+      <div className="movie-banner p-xxl">
         <div className="image">
           <img src={item.background_image_original} alt={item.title} />
         </div>
         <div className="container">
           <div className="title-container">
             <div className="title-top">
-              <div className="movie-title">
+              <div className="movie-title ">
                 <h1>{item.title}</h1>
               </div>
               <div className="about">
@@ -50,27 +50,27 @@ function Movie() {
                 <p>{description.substring(0, 965)}</p>
               </div>
             </div>
-            <div className="title-bottom">
-              <div className="category">
-                <div>
-                  <strong>Genres: </strong>
-                  <ul>
-                    {genre.map((listitem) => (
-                      <li key={listitem}>{listitem} |</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  {torrents.map((item) => (
-                    <a href={item.url} key={item.url}>
-                      <Btn
-                        label={`${item.quality}.${
-                          item.type.charAt(0).toUpperCase() + item.type.slice(1)
-                        }`}
-                      />
-                    </a>
-                  ))}
-                </div>
+            <div className="flex flex-col gap-m">
+              <div className="highlight-bold">Genres: </div>
+              <div>
+                {genre.map((listitem, index) => (
+                  <span className="highlight color-primary" key={listitem}>
+                    {listitem}
+                    {index !== genre.length - 1 && " | "}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex gap-base">
+                {torrents.map((item) => (
+                  <a href={item.url} key={item.url}>
+                    <Btn
+                      label={`${item.quality}.${
+                        item.type.charAt(0).toUpperCase() + item.type.slice(1)
+                      }`}
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
