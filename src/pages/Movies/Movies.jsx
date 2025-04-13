@@ -1,6 +1,5 @@
-// src/pages/Movies/Movies.jsx
 import React, { useEffect, useState, useCallback } from "react";
-import { useSearchParams } from "react-router-dom"; // ✅ this is what you need
+import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import Pagination from "../../components/Pagination/Pagination";
 import MovieCard from "../../components/MovieCard/MovieCard";
@@ -11,16 +10,27 @@ import "./Movies.scss";
 function Movies() {
   const [movies, setMovies] = useState([]);
   const [movieCount, setMovieCount] = useState(0);
-  const [searchParams] = useSearchParams(); // ✅ correct usage
+  const [itemsPerPage, setItemsPerPage] = useState(20);
+  const { search } = useParams();
+  
+  // Check screen width on load and on resize
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      setItemsPerPage(window.innerWidth <= 768 ? 10 : 20); 
+    };
 
-  const itemsPerPage = 20;
+    updateItemsPerPage();
+
+    window.addEventListener("resize", updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
 
   const loadMovies = useCallback(
     async (page = 1) => {
       try {
         const { movies, movieCount } = await fetchMoviesFromAPI({
           page,
-          search: searchParams.get("search") || "",
+          search: search,
           itemsPerPage,
         });
 
@@ -32,7 +42,7 @@ function Movies() {
         setMovieCount(0);
       }
     },
-    [searchParams, itemsPerPage]
+    [search, itemsPerPage]
   );
 
   useEffect(() => {
@@ -48,11 +58,6 @@ function Movies() {
     <div className="flex flex-col gap-l px-xxl py-l">
       <SearchBar />
 
-      <Pagination
-        pageCount={Math.ceil(movieCount / itemsPerPage)}
-        onPageChange={handlePageClick}
-      />
-
       <motion.div
         className="movie-grid"
         animate={{ opacity: 1 }}
@@ -64,6 +69,11 @@ function Movies() {
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </motion.div>
+
+      <Pagination
+        pageCount={Math.ceil(movieCount / itemsPerPage)}
+        onPageChange={handlePageClick}
+      />
     </div>
   );
 }
