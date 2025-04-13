@@ -25,7 +25,7 @@ const MovieCard = ({ movie }) => {
           <div className="bottom">
             <div className="text-left flex flex-col gap-sm flex-align-start">
               <span>{movie.year}</span>
-              <strong className="highlight-bold">{movie.title}</strong>
+              <strong className="movie-title">{movie.title}</strong>
             </div>
             <div className="rating flex flex-align-center">
               {movie.rating}/10

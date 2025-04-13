@@ -32,8 +32,8 @@ function Movie() {
         <div className="container">
           <div className="title-container">
             <div className="title-top">
-              <div className="movie-title ">
-                <h1>{item.title}</h1>
+              <div className="movie-title">
+                <div className="blanka heading-2">{item.title}</div>
               </div>
               <div className="about">
                 <div className="rating">
@@ -86,7 +86,7 @@ function Movie() {
       </div>
       <section className="movie-details">
         <section className="trailer">
-          <strong>Trailer</strong>
+          <div className="blanka heading-3 color-primary py-base">Trailer</div>
           <iframe
             className="yt-frame"
             width="660"
