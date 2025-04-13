@@ -4,23 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  padding: 0;
-  color: white;
-  background: #020202;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-ul {
-  text-decoration: none;
-  list-style: none;
-}
+
 
 :root {
   --font-base: "DM Sans", sans-serif;
@@ -28,69 +12,10 @@ ul {
   --base-white-light: #fafafa;
   --base-black: #000000;
   --base-black-light: #121212;
-  --color-primary: #27ae60;
-  --dark-color-primary-bg: #272727;
-  --dark-color-base-bg: #000000;
-  --dark-color-primary-text: #ffffff;
-  --dark-color-primary-text-light: #b3b3b3;
-  --dark-color-primary: #9a2e2e;
-  --dark-color-secondary: #ffda00;
-  --dark-color-success: #27ae60;
-  --dark-color-warning: #eb5757;
-  --dark-brand-100: #6a2d70;
-  --dark-brand-200: #5e1d64;
-  --dark-brand-300: #531759;
-  --dark-brand-400: #48124d;
-  --dark-brand-500: #3c0f43;
-  --dark-brand-600: #2d0b35;
-  --dark-brand-700: #1f0727;
-  --dark-brand-800: #14051d;
-  --dark-secondary-100: #f1d580;
-  --dark-secondary-200: #f1cd5e;
-  --dark-secondary-300: #f0c43d;
-  --dark-secondary-400: #e8b11e;
-  --dark-secondary-500: #df9c00;
-  --dark-secondary-600: #cc8800;
-  --dark-secondary-700: #b77300;
-  --dark-secondary-800: #9e5f00;
-  --dark-neutral-100: #1a1919;
-  --dark-neutral-200: #181818;
-  --dark-neutral-300: #555555;
-  --dark-neutral-400: #666666;
-  --dark-neutral-500: #777777;
-  --dark-neutral-600: #888888;
-  --dark-neutral-700: #999999;
-  --dark-neutral-800: #b2b2b2;
-  --dark-neutral-900: #cccccc;
-  --dark-neutral-1000: #e5e5e5;
-  --dark-success-100: #2a5b46;
-  --dark-success-200: #396f5a;
-  --dark-success-300: #4b825f;
-  --dark-success-400: #5e9465;
-  --dark-success-500: #7dce9f;
-  --dark-success-600: #9fdcb5;
-  --dark-success-700: #52be80;
-  --dark-success-800: #27ae60;
-  --dark-warning-100: #5d1d1d;
-  --dark-warning-200: #7c2525;
-  --dark-warning-300: #9a2e2e;
-  --dark-warning-400: #d81e1e;
-  --dark-warning-500: #f05a5a;
-  --dark-warning-600: #f06161;
-  --dark-warning-700: #e63946;
-  --dark-warning-800: #e53a3a;
-  --dark-shimmer-light: linear-gradient(
-    to right,
-    #333333 10%,
-    #444444 18%,
-    #333333 33%
-  );
-  --dark-shimmer-dark: linear-gradient(
-    to right,
-    #e8e8e8 10%,
-    #dddddd 18%,
-    #e8e8e8 33%
-  );
+  /* --background: #30382f; */
+  --background: #0f0f0f;
+  --background-light: #0d0d0d;
+  --color-primary: #dc143c;
   --font-feature: 1rem;
   --font-highlight: 0.875rem;
   --font-content: 0.75rem;
@@ -155,6 +80,25 @@ ul {
     0px 4px 8px 0px #0000000a;
   --shadow-xl: 0px 4px 12px 0px #0000001f;
 }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  padding: 0;
+  color: white;
+  background: var(--background);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
 
 .blanka {
   font-family: "Blanka", sans-serif;
@@ -2307,7 +2251,7 @@ ul {
 
 .section-heading {
   font-family: "Blanka", sans-serif;
-  background: #0b0b0bc2;
+  background: var(--background-light);
 }
 
 @media (max-width: 768px) {

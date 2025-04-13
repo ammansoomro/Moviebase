@@ -1,11 +1,11 @@
 .movie-card {
   position: relative;
-  border-radius: 0.5rem;
-  border: 0.3rem solid white;
+  border-radius: 0.25rem;
+  border: 0.2rem solid white;
   transition: all ease 0.3s;
 
   &:hover {
-    border: 0.3rem solid var(--color-primary);
+    border: 0.2rem solid var(--color-primary);
   }
 
   &:hover .card-hover {

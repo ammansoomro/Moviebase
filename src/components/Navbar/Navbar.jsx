@@ -15,13 +15,13 @@ function Navbar() {
   }, []);
 
   return (
-    <div className={`nav bg-neutral-100 flex flex-align-center flex-justify-between py-base px-xl ${scrolled ? "scrolled" : ""}`}>
+    <div className={`nav flex flex-align-center flex-justify-between py-base px-xl ${scrolled ? "scrolled" : ""}`}>
       <Link to="/">
         <div className="heading-2 blanka color-primary">MovieBase</div>
       </Link>
       <div className="flex flex-align-center gap-base">
         <Link to="/movies">
-          <div className="blanka highlight base-white list-item">
+          <div className=" highlight-bold blanka base-white list-item">
             All Movies
           </div>
         </Link>
