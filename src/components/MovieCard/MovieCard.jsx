@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./MovieCard.scss";
-
+import Btn from "../Btn/Btn";
 const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
@@ -16,7 +16,7 @@ const MovieCard = ({ movie }) => {
 
         <div className="card-hover flex-center gap-xl flex-col">
           <div className="feature-bold">{movie.genres[1]}</div>
-          <button className="btn">View Movie</button>
+          <Btn label="View More" />
           <div className="highlight-accent">{movie.runtime}mins</div>
         </div>
 

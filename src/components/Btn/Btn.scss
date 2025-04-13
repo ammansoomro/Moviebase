@@ -1,0 +1,14 @@
+.btn {
+  border: none;
+  outline: 2px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 4px;
+  transition: transform 0.3s ease, outline 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}

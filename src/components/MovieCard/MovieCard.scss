@@ -42,19 +42,4 @@
   transition: 0.5s;
   padding: 10px;
   background: linear-gradient(90deg, #000000b5 100%, #fafafa 0%);
-  .btn {
-    border: none;
-    outline: 2px solid var(--color-primary);
-    background: transparent;
-    color: var(--color-primary);
-    cursor: pointer;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: 0.4s;
-
-    &:hover {
-      color: var(--color-primary);
-      outline: 2px solid var(--color-primary);
-    }
-  }
 }

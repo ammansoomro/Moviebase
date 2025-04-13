@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import './Movie.scss'; // Import the CSS file
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "./Movie.scss";
+import Btn from "../../components/Btn/Btn";
 
 function Movie() {
   const [item, setItem] = useState([]);
@@ -62,9 +63,11 @@ function Movie() {
                 <div>
                   {torrents.map((item) => (
                     <a href={item.url} key={item.url}>
-                      <button className="btn">
-                        {item.quality}.{item.type.charAt(0).toUpperCase() + item.type.slice(1)}
-                      </button>
+                      <Btn
+                        label={`${item.quality}.${
+                          item.type.charAt(0).toUpperCase() + item.type.slice(1)
+                        }`}
+                      />
                     </a>
                   ))}
                 </div>
@@ -74,7 +77,10 @@ function Movie() {
         </div>
         <div className="movie-main-card">
           <div className="card-image">
-            <img src={item.medium_cover_image} alt="Please Wait, Fetching Data..." />
+            <img
+              src={item.medium_cover_image}
+              alt="Please Wait, Fetching Data..."
+            />
           </div>
         </div>
       </div>
