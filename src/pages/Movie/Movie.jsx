@@ -61,7 +61,7 @@ function Movie() {
                 ))}
               </div>
 
-              <div className="flex gap-base">
+              <div className="flex gap-base btn-container">
                 {torrents.map((item) => (
                   <a href={item.url} key={item.url}>
                     <Btn
@@ -88,6 +88,7 @@ function Movie() {
         <section className="trailer">
           <strong>Trailer</strong>
           <iframe
+            className="yt-frame"
             width="660"
             height="350"
             src={`https://www.youtube-nocookie.com/embed/${item.yt_trailer_code}`}

@@ -3,8 +3,22 @@
   position: relative;
   display: flex;
   justify-content: center;
-}
 
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    padding: 2rem !important;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+.card-image {
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .movie-banner::after {
   content: "";
   position: absolute;
@@ -50,8 +64,14 @@
   z-index: 100;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
   position: relative;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .title-container {
@@ -68,6 +88,9 @@
   color: #747474;
   width: 180%;
   text-align: justify;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .movie-title h1 {
@@ -86,8 +109,20 @@
   margin-top: 10px;
   flex-wrap: wrap;
   color: #e9e9e9;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
+.btn-container {
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+  }
+}
 .rating {
   display: flex;
   align-items: center;
@@ -139,25 +174,8 @@ li:not(:first-child) {
   color: #ffffff;
 }
 
-.movie-details {
-  width: 100%;
-  max-width: 1000px;
-  margin: 2rem auto 1rem auto;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.movie-details p {
-  margin: 1rem 0;
-  color: #747474;
-}
-
 .trailer {
   width: 100%;
-  max-width: 800px;
-  margin: 0rem auto 3.5rem auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -179,4 +197,14 @@ li:not(:first-child) {
   position: relative;
   border-radius: 1rem;
   margin-top: 1rem;
+}
+
+.yt-frame {
+  width: 660px;
+  height: 350px;
+
+  @media (max-width: 768px) {
+    width: 275px;
+    height: 220px;
+  }
 }
